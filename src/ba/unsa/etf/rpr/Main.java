@@ -53,7 +53,21 @@ class Sat {
         return sekunde;
     }
     void Ispisi()  {
-        System.out.println(sati + ":" + minute + ":" + sekunde);
+        if (sati < 10)
+        {
+            System.out.print(0);
+        }
+        System.out.print(sati + ":");
+        if (minute < 10)
+        {
+            System.out.print(0);
+        }
+        System.out.print(minute + ":");
+        if (sekunde < 10)
+        {
+            System.out.print(0);
+        }
+        System.out.println(sekunde);
     }
     public static void main(String[] args)
     {
@@ -63,7 +77,7 @@ class Sat {
         s.Ispisi();
         s.PomjeriZa(-48);
         s.Ispisi();
-        s.Postavi(0,0,0);
+        s.Postavi(6,11,2);
         s.Ispisi();
     }
 }
